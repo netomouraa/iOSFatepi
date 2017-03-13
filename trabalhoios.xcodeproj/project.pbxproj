@@ -16,8 +16,12 @@
 		337F7D3A1E71F050007DFBA9 /* trabalhoiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F7D391E71F050007DFBA9 /* trabalhoiosUITests.swift */; };
 		33F2A6C71E730A7E0043B3FD /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A6C61E730A7E0043B3FD /* CadastroViewController.swift */; };
 		33F2A6C91E731FE20043B3FD /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A6C81E731FE20043B3FD /* Usuarios.swift */; };
-		33F2A6CB1E73267B0043B3FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A6CA1E73267B0043B3FD /* HomeViewController.swift */; };
 		394C6BE2C2784091DDD69752 /* Pods_trabalhoios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F06699794FFDADB7764ABF4 /* Pods_trabalhoios.framework */; };
+		971148E21E761EC300FD3ED8 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971148E11E761EC300FD3ED8 /* MovieViewController.swift */; };
+		971148E41E761F0F00FD3ED8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971148E31E761F0E00FD3ED8 /* Movie.swift */; };
+		971148E61E761F2A00FD3ED8 /* MovieItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971148E51E761F2A00FD3ED8 /* MovieItemTableViewCell.swift */; };
+		971148E81E761F3600FD3ED8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971148E71E761F3600FD3ED8 /* DetailsViewController.swift */; };
+		971148ED1E76252700FD3ED8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971148EC1E76252700FD3ED8 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +58,13 @@
 		337F7D3B1E71F050007DFBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F2A6C61E730A7E0043B3FD /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastroViewController.swift; path = ../CadastroViewController.swift; sourceTree = "<group>"; };
 		33F2A6C81E731FE20043B3FD /* Usuarios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
-		33F2A6CA1E73267B0043B3FD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		77C822BA6148610B0A7AED0E /* Pods-trabalhoios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trabalhoios.release.xcconfig"; path = "Pods/Target Support Files/Pods-trabalhoios/Pods-trabalhoios.release.xcconfig"; sourceTree = "<group>"; };
 		922B1F04A6FB94FAB852B430 /* Pods-trabalhoios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trabalhoios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trabalhoios/Pods-trabalhoios.debug.xcconfig"; sourceTree = "<group>"; };
+		971148E11E761EC300FD3ED8 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		971148E31E761F0E00FD3ED8 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		971148E51E761F2A00FD3ED8 /* MovieItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieItemTableViewCell.swift; sourceTree = "<group>"; };
+		971148E71E761F3600FD3ED8 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		971148EC1E76252700FD3ED8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,15 +127,10 @@
 		337F7D181E71F050007DFBA9 /* trabalhoios */ = {
 			isa = PBXGroup;
 			children = (
-				33F2A6C61E730A7E0043B3FD /* CadastroViewController.swift */,
-				337F7D191E71F050007DFBA9 /* AppDelegate.swift */,
-				337F7D1B1E71F050007DFBA9 /* ViewController.swift */,
-				33F2A6CA1E73267B0043B3FD /* HomeViewController.swift */,
-				337F7D1D1E71F050007DFBA9 /* Main.storyboard */,
-				337F7D201E71F050007DFBA9 /* Assets.xcassets */,
-				337F7D221E71F050007DFBA9 /* LaunchScreen.storyboard */,
-				337F7D251E71F050007DFBA9 /* Info.plist */,
-				33F2A6C81E731FE20043B3FD /* Usuarios.swift */,
+				971148EA1E7620CA00FD3ED8 /* Login */,
+				971148E91E7620B200FD3ED8 /* Movie */,
+				971148EE1E76258C00FD3ED8 /* Map */,
+				971148EB1E7620DE00FD3ED8 /* Etc */,
 			);
 			path = trabalhoios;
 			sourceTree = "<group>";
@@ -148,6 +151,47 @@
 				337F7D3B1E71F050007DFBA9 /* Info.plist */,
 			);
 			path = trabalhoiosUITests;
+			sourceTree = "<group>";
+		};
+		971148E91E7620B200FD3ED8 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				971148E11E761EC300FD3ED8 /* MovieViewController.swift */,
+				971148E51E761F2A00FD3ED8 /* MovieItemTableViewCell.swift */,
+				971148E71E761F3600FD3ED8 /* DetailsViewController.swift */,
+				971148E31E761F0E00FD3ED8 /* Movie.swift */,
+			);
+			name = Movie;
+			sourceTree = "<group>";
+		};
+		971148EA1E7620CA00FD3ED8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				337F7D1B1E71F050007DFBA9 /* ViewController.swift */,
+				33F2A6C61E730A7E0043B3FD /* CadastroViewController.swift */,
+				33F2A6C81E731FE20043B3FD /* Usuarios.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		971148EB1E7620DE00FD3ED8 /* Etc */ = {
+			isa = PBXGroup;
+			children = (
+				337F7D191E71F050007DFBA9 /* AppDelegate.swift */,
+				337F7D1D1E71F050007DFBA9 /* Main.storyboard */,
+				337F7D201E71F050007DFBA9 /* Assets.xcassets */,
+				337F7D221E71F050007DFBA9 /* LaunchScreen.storyboard */,
+				337F7D251E71F050007DFBA9 /* Info.plist */,
+			);
+			name = Etc;
+			sourceTree = "<group>";
+		};
+		971148EE1E76258C00FD3ED8 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				971148EC1E76252700FD3ED8 /* MapViewController.swift */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 		F1EF79151FB2EE4C6BE2F731 /* Frameworks */ = {
@@ -229,6 +273,7 @@
 				TargetAttributes = {
 					337F7D151E71F04F007DFBA9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G7EA55P48L;
 						ProvisioningStyle = Automatic;
 					};
 					337F7D291E71F050007DFBA9 = {
@@ -343,11 +388,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971148E41E761F0F00FD3ED8 /* Movie.swift in Sources */,
+				971148E61E761F2A00FD3ED8 /* MovieItemTableViewCell.swift in Sources */,
+				971148E81E761F3600FD3ED8 /* DetailsViewController.swift in Sources */,
 				33F2A6C91E731FE20043B3FD /* Usuarios.swift in Sources */,
 				337F7D1C1E71F050007DFBA9 /* ViewController.swift in Sources */,
 				337F7D1A1E71F050007DFBA9 /* AppDelegate.swift in Sources */,
 				33F2A6C71E730A7E0043B3FD /* CadastroViewController.swift in Sources */,
-				33F2A6CB1E73267B0043B3FD /* HomeViewController.swift in Sources */,
+				971148ED1E76252700FD3ED8 /* MapViewController.swift in Sources */,
+				971148E21E761EC300FD3ED8 /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +549,9 @@
 			baseConfigurationReference = 922B1F04A6FB94FAB852B430 /* Pods-trabalhoios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G7EA55P48L;
 				INFOPLIST_FILE = trabalhoios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fernandovaller.trabalhoios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,7 +564,9 @@
 			baseConfigurationReference = 77C822BA6148610B0A7AED0E /* Pods-trabalhoios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G7EA55P48L;
 				INFOPLIST_FILE = trabalhoios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fernandovaller.trabalhoios;
 				PRODUCT_NAME = "$(TARGET_NAME)";

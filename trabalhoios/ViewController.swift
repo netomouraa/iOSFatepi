@@ -8,8 +8,13 @@
 
 import UIKit
 import RealmSwift
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class ViewController: UIViewController {
+
+    //let facebookLogin = FBSDKLoginManager()
+    var dict : [String : AnyObject]!
 
     @IBOutlet weak var lblSenha: UITextField!
     @IBOutlet weak var lblEmail: UITextField!
@@ -18,6 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         do {
             
@@ -74,7 +81,7 @@ class ViewController: UIViewController {
             
             if user1.count == 1 {
                 
-                let homeView: HomeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+                let homeView: MovieViewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieVC") as! MovieViewController
                 
                 self.navigationController?.pushViewController(homeView, animated: true)
                 
@@ -123,5 +130,50 @@ class ViewController: UIViewController {
 //        self.navigationController?.pushViewController(cadastroView, animated: true)
         
     }
+    
+    @IBAction func facebookLogin(_ sender: AnyObject) {
+        
+        faceLogin()
+        
+    }
+    
+    
+    
+    func faceLogin(){
+        
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result!
+                if fbloginresult.grantedPermissions != nil {
+                    if(fbloginresult.grantedPermissions.contains("email"))
+                    {
+                        self.getFBUserData()
+                        fbLoginManager.logOut()
+                        
+                        let homeView: MovieViewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieVC") as! MovieViewController
+                        
+                        self.navigationController?.pushViewController(homeView, animated: true)
+                    }
+                }
+            }
+        }
+        
+        
+    }
+
+    
+    func getFBUserData(){
+        if((FBSDKAccessToken.current()) != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil){
+                    self.dict = result as! [String : AnyObject]
+                    print(result!)
+                    print(self.dict)
+                }
+            })
+        }
+    }
+    
 }
 
